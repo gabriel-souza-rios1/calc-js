@@ -32,16 +32,16 @@ input.addEventListener('keydown', function(ev){
 
     if(ev.key === 'Enter'){
         calculate()
+        input.classList.remove('error') 
     }
 })
 
 document.getElementById('equal').addEventListener('click', calculate)
 
 function calculate(){
-    input.value = "Error!"
-    input.classList.add('error')
     const result = eval(input.value)
     input.value = result
+    
 }
 
 
